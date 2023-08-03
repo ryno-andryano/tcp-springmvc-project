@@ -6,7 +6,12 @@
     </head>
     <body>
         <h1>Database Mahasiswa</h1>
-        <table>
+        <nav>
+            <a href="/mahasiswa">Daftar Mahasiswa</a> |
+            <a href="/tambah-mahasiswa">Tambah Data Mahasiswa</a>
+        </nav>
+        <br><br>
+        <table border="1px" cellpadding="6px" cellspacing="0">
             <thead>
                 <tr>
                     <th>NIM</th>

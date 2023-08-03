@@ -2,9 +2,7 @@ package com.prosigmaka.database;
 
 import com.prosigmaka.model.Mahasiswa;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,5 +36,31 @@ public class MahasiswaDb {
         }
 
         return listMahasiswa;
+    }
+
+    public static boolean addMahasiswa(int nim, String nama, Date tanggal_lahir, String jurusan, int tahun_masuk) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = getConnection();
+
+            String sqlQuery = "INSERT INTO mahasiswa VALUES (?, ?, ?, ?, ?)";
+            PreparedStatement st = con.prepareStatement(sqlQuery);
+            st.setInt(1, nim);
+            st.setString(2, nama);
+            st.setDate(3, tanggal_lahir);
+            st.setString(4, jurusan);
+            st.setInt(5, tahun_masuk);
+
+            int rs = st.executeUpdate();
+            if (rs == 1) {
+                return true;
+            }
+
+            st.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return false;
     }
 }
