@@ -9,7 +9,7 @@
         <h1>Database Mahasiswa</h1>
         <nav>
             <a href="/mahasiswa">Daftar Mahasiswa</a> |
-            <a href="/tambah-mahasiswa">Tambah Data Mahasiswa</a>
+            <a href="/add-mahasiswa">Tambah Data Mahasiswa</a>
         </nav>
         <br><br>
         <table border="1px" cellpadding="6px" cellspacing="0">
