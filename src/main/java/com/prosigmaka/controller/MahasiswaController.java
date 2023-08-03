@@ -30,8 +30,7 @@ public class MahasiswaController {
             @RequestParam("nama") String nama,
             @RequestParam("tanggal_lahir") Date tanggal_lahir,
             @RequestParam("jurusan") String jurusan,
-            @RequestParam("tahun_masuk") int tahun_masuk
-    ) {
+            @RequestParam("tahun_masuk") int tahun_masuk) {
         MahasiswaDb.addMahasiswa(new Mahasiswa(nim, nama, tanggal_lahir, jurusan, tahun_masuk));
         return new ModelAndView("redirect:/mahasiswa");
     }
@@ -43,8 +42,7 @@ public class MahasiswaController {
             @RequestParam("tanggal_lahir") Date tanggal_lahir,
             @RequestParam("jurusan") String jurusan,
             @RequestParam("tahun_masuk") int tahun_masuk,
-            @RequestParam("prev_nim") int prev_nim
-    ) {
+            @RequestParam("prev_nim") int prev_nim) {
         MahasiswaDb.editMahasiswa(prev_nim, new Mahasiswa(nim, nama, tanggal_lahir, jurusan, tahun_masuk));
         return new ModelAndView("redirect:/mahasiswa");
     }
