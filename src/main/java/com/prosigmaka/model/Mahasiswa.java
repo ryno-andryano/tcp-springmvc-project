@@ -1,6 +1,6 @@
 package com.prosigmaka.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Mahasiswa {
     private int nim;

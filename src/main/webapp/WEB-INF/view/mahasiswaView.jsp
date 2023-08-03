@@ -9,7 +9,7 @@
         <h1>Database Mahasiswa</h1>
         <nav>
             <a href="/mahasiswa">Daftar Mahasiswa</a> |
-            <a href="/tambah-mahasiswa">Tambah Data Mahasiswa</a>
+            <a href="/add-mahasiswa">Tambah Data Mahasiswa</a>
         </nav>
         <br><br>
         <table border="1px" cellpadding="6px" cellspacing="0">
@@ -32,7 +32,8 @@
                         <td>${m.jurusan}</td>
                         <td>${m.tahunMasuk}</td>
                         <td>
-                            <form action="/edit?nim=${m.nim}" style="display: inline">
+                            <form action="/edit-mahasiswa" style="display: inline">
+                                <input type="text" name="nim" value="${m.nim}" style="display: none">
                                 <input type="submit" value="Edit"/>
                             </form>
                             <form action="/delete?nim=${m.nim}" style="display: inline" method="post">
