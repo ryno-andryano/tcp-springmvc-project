@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Database Mahasiswa</title>
     </head>
     <body>
@@ -14,7 +15,7 @@
             <table cellpadding="4px">
                 <tr>
                     <td><label for="nim">NIM:</label></td>
-                    <td><input type="number" id="nim" name="nim" min="17000000" max="23999999" required></td>
+                    <td><input type="text" id="nim" name="nim" required></td>
                 </tr>
                 <tr>
                     <td><label for="nama">Nama:</label></td>
@@ -22,7 +23,8 @@
                 </tr>
                 <tr>
                     <td><label for="tanggal_lahir">Tanggal Lahir:</label></td>
-                    <td><input type="date" id="tanggal_lahir" name="tanggal_lahir" required></td>
+                    <td><input type="date" id="tanggal_lahir" name="tanggal_lahir" min="1998-01-01" max="2006-12-31"
+                               required></td>
                 </tr>
                 <tr>
                     <td><label for="jurusan">Jurusan:</label></td>
@@ -33,7 +35,7 @@
                     <td><input type="number" id="tahun_masuk" name="tahun_masuk" min="2017" max="2023" required></td>
                 </tr>
                 <tr>
-                    <td><input type="submit" value="Submit"></td>
+                    <td><input type="submit" value="Save"></td>
                 </tr>
             </table>
         </form>

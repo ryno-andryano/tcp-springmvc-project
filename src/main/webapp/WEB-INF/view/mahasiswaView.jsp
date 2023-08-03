@@ -2,6 +2,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Database Mahasiswa</title>
     </head>
     <body>
@@ -19,6 +20,7 @@
                     <th>Tanggal Lahir</th>
                     <th>Program Studi</th>
                     <th>Tahun Masuk</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -29,6 +31,14 @@
                         <td>${m.tanggalLahir}</td>
                         <td>${m.jurusan}</td>
                         <td>${m.tahunMasuk}</td>
+                        <td>
+                            <form action="/edit?nim=${m.nim}" style="display: inline">
+                                <input type="submit" value="Edit"/>
+                            </form>
+                            <form action="/delete?nim=${m.nim}" style="display: inline" method="post">
+                                <input type="submit" value="Delete"/>
+                            </form>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>

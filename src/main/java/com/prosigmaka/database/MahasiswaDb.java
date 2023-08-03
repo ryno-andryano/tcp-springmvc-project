@@ -63,4 +63,26 @@ public class MahasiswaDb {
 
         return false;
     }
+
+    public static boolean deleteMahasiswa(int nim) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = getConnection();
+
+            String sqlQuery = "DELETE FROM mahasiswa WHERE nim=?";
+            PreparedStatement st = con.prepareStatement(sqlQuery);
+            st.setInt(1, nim);
+
+            int rs = st.executeUpdate();
+            if (rs == 1) {
+                return true;
+            }
+
+            st.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+
+        return false;
+    }
 }
