@@ -10,7 +10,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class FormController {
 
-    @GetMapping("/add-mahasiswa")
+    @GetMapping("add-mahasiswa")
     public ModelAndView displayFormAddMahasiswa() {
         ModelAndView mv = new ModelAndView();
         mv.addObject("action", "/add-mahasiswa");
@@ -18,7 +18,7 @@ public class FormController {
         return mv;
     }
 
-    @GetMapping("/edit-mahasiswa")
+    @GetMapping("edit-mahasiswa")
     public ModelAndView displayFormEditMahasiswa(@RequestParam("nim") int nim) {
         Mahasiswa mahasiswa = MahasiswaDb.getMahasiswa(nim);
 

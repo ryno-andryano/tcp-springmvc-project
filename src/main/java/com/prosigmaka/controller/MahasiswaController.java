@@ -14,7 +14,7 @@ import java.util.List;
 @Controller
 public class MahasiswaController {
 
-    @GetMapping("/mahasiswa")
+    @GetMapping("mahasiswa")
     public ModelAndView getAllMahasiswa() {
         ModelAndView mv = new ModelAndView();
         List<Mahasiswa> listMahasiswa = MahasiswaDb.getAllMahasiswa();
@@ -24,7 +24,7 @@ public class MahasiswaController {
         return mv;
     }
 
-    @PostMapping("/add-mahasiswa")
+    @PostMapping("add-mahasiswa")
     public ModelAndView addMahasiswa(
             @RequestParam("nim") int nim,
             @RequestParam("nama") String nama,
@@ -35,7 +35,7 @@ public class MahasiswaController {
         return new ModelAndView("redirect:/mahasiswa");
     }
 
-    @PostMapping("/edit-mahasiswa")
+    @PostMapping("edit-mahasiswa")
     public ModelAndView editMahasiswa(
             @RequestParam("nim") int nim,
             @RequestParam("nama") String nama,
@@ -47,7 +47,7 @@ public class MahasiswaController {
         return new ModelAndView("redirect:/mahasiswa");
     }
 
-    @PostMapping("/delete")
+    @PostMapping("delete")
     public ModelAndView deleteMahasiswa(@RequestParam("nim") int nim) {
         MahasiswaDb.deleteMahasiswa(nim);
         return new ModelAndView("redirect:/mahasiswa");

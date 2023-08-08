@@ -11,20 +11,20 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand mb-0 h1" href="#">MAHASISWA DB</a>
+                <a class="navbar-brand mb-0 h1">MAHASISWA DB</a>
                 <div class="navbar-text">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/mahasiswa">Daftar Mahasiswa</a>
+                            <a class="nav-link active" aria-current="page" href="mahasiswa">Daftar Mahasiswa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/add-mahasiswa">Tambah Data</a>
+                            <a class="nav-link" href="add-mahasiswa">Tambah Data</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container">
+        <div class="container mt-4">
             <br>
             <form action="${action}" method="post" class="row g-3">
 
